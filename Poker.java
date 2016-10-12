@@ -1,5 +1,6 @@
 
 import java.util.Random;
+import java.util.Scanner;
 
 
 /**
@@ -66,19 +67,79 @@ public class Poker {
 
 
         }//*第二种算法
-
+        Poker hand[]= new Poker[2];
+        Poker hand2[]=new Poker[2];
+       Poker under[]=new Poker[5];
+        Poker under2[]=new Poker[5];
+        under[0] = pokers[4];
+        under[1] = pokers[5];
+        under[2] = pokers[6];
+        under[3] = pokers[7];
+        under[4] = pokers[8];
+        hand[1]=pokers[1];
+        hand[0]=pokers[0];
+        System.out.println("玩家1的手牌是：");
+        System.out.println(hand[0].suit+"\t"+hand[0].point+"\t"+hand[1].suit+"\t"+hand[1].point);
+        System.out.println("玩家1的底牌是：");
+        for (int i = 0; i < 5; i++) {
+            System.out.println(under[i].suit + "\t" + under[i].point);
+        }
+        under2[0] = pokers[9];
+        under2[1] = pokers[10];
+        under2[2] = pokers[11];
+        under2[3] = pokers[12];
+        under2[4] = pokers[13];
+        hand2[1]=pokers[1];
+        hand2[0]=pokers[0];
+        System.out.println("玩家2的手牌是：");
+        System.out.println(hand2[0].suit+"\t"+hand2[0].point+"\t"+hand2[1].suit+"\t"+hand2[1].point);
+        System.out.println("玩家2的底牌是：");
+        for (int i = 0; i < 5; i++) {
+            System.out.println(under2[i].suit + "\t" + under2[i].point);
+        }
+        System.out.println("玩家1选择底牌");
+        Scanner sca=new Scanner(System.in);
+        int ja,k,l=0;
+        ja=sca.nextInt();
+        k=sca.nextInt();
+        l=sca.nextInt();
         Poker desk[] = new Poker[5];
-        desk[0] = pokers[4];
-        desk[1] = pokers[5];
-        desk[2] = pokers[6];
-        desk[3] = pokers[7];
-        desk[4] = pokers[8];
+        desk[0] = hand[0];
+        desk[1] = hand[1];
+
+        if(ja<5){
+            desk[2]=under[ja];
+        }
+        if(k<5&&k!=ja){
+            desk[3]=under[k];
+        }
+        if(l<5&&l!=ja&&l!=k){
+            desk[4]=under[l];
+        }
+
+
         Poker desk2[] = new Poker[5];
         desk2[0] = pokers[9];
         desk2[1] = pokers[10];
-        desk2[2] = pokers[11];
-        desk2[3] = pokers[12];
-        desk2[4] = pokers[13];//*发牌
+        System.out.println("玩家2选择底牌");
+
+        int jw,ka,la=0;
+        jw=sca.nextInt();
+        ka=sca.nextInt();
+        la=sca.nextInt();
+
+        desk2[0] = hand2[0];
+        desk2[1] = hand2[1];
+
+        if(jw<5){
+            desk2[2]=under2[jw];
+        }
+        if(ka<5&&ka!=jw){
+            desk2[3]=under2[ka];
+        }
+        if(la<5&&la!=ja&&l!=ka){
+            desk2[4]=under2[la];
+        }//*发牌
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++)
                 if (desk[i].points > desk[j].points) {
@@ -97,11 +158,11 @@ public class Poker {
 
                 }
         }
-        System.out.println("玩家1的手牌是：");
+        System.out.println("玩家1的牌是：");
         for (int i = 0; i < 5; i++) {
             System.out.println(desk[i].suit + "\t" + desk[i].point);
         }
-        System.out.println("玩家2的手牌是：");
+        System.out.println("玩家2的牌是：");
         for (int i = 0; i < 5; i++) {
             System.out.println(desk2[i].suit + "\t" + desk2[i].point);
         }
@@ -309,6 +370,14 @@ public class Poker {
                 } else if (desk[1].points < desk2[1].points) {
                     System.out.println("玩家2胜利");
                 }
+               else if (desk[1].points == desk2[1].points){
+                    if (desk[3].points > desk2[3].points) {
+                        System.out.println("玩家1胜利");
+                    } else if (desk[3].points < desk2[3].points) {
+                        System.out.println("玩家2胜利");
+                    }
+
+                }
             }
             else if (pokerstyle.equals("一对")){
                 if(pokerstyle1.equals("L")&&pokerstyle2.equals("L")&&desk[0].points>desk2[0].points){
@@ -422,7 +491,48 @@ public class Poker {
                 }
                 else if (desk[0].points == desk2[0].points)
                 {
-                    System.out.println("平局");
+                    if (desk[1].points > desk2[1].points)
+                    {
+                        System.out.println("玩家1胜利");
+
+                    }
+                    else if (desk[1].points < desk2[1].points)
+                    {
+                        System.out.println("玩家2胜利");
+
+                    }
+                     else if (desk[2].points > desk2[2].points)
+                    {
+                        System.out.println("玩家1胜利");
+
+                    }
+                    else if (desk[2].points < desk2[2].points)
+                    {
+                        System.out.println("玩家2胜利");
+
+                    }
+                    else if (desk[3].points > desk2[3].points)
+                    {
+                        System.out.println("玩家1胜利");
+
+                    }
+                    else if (desk[3].points < desk2[3].points)
+                    {
+                        System.out.println("玩家2胜利");
+
+                    }
+                    else if (desk[4].points > desk2[4].points)
+                    {
+                        System.out.println("玩家1胜利");
+
+                    }
+                    else if (desk[4].points < desk2[4].points)
+                    {
+                        System.out.println("玩家2胜利");
+
+                    }
+                    else System.out.println("平局");
+
 
                 }}
         }
