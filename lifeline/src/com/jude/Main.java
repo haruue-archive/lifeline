@@ -1,5 +1,6 @@
 package com.jude;
 
+import com.jude.prisoner.JayPrisoner;
 import com.jude.prisoner.NimaPrisoner;
 
 import java.util.Map;
@@ -12,6 +13,7 @@ public class Main {
             new NimaPrisoner(),
             new NimaPrisoner(),
             new NimaPrisoner(),
+            new JayPrisoner(),
     };
 
 
