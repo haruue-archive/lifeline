@@ -16,7 +16,7 @@ public class NimaPrisoner implements Prisoner {
     }
 
     @Override
-    public void begin(Manager manager,int totalPerson, int totalCount) {
+    public void begin(Manager manager, int totalPerson, int totalCount) {
         this.totalCount = totalCount;
         this.totalPerson = totalPerson;
     }
@@ -24,7 +24,7 @@ public class NimaPrisoner implements Prisoner {
     @Override
     public int take(int index, int last) {
         //经过我王尼玛缜密的计算，我算出我拿这个数最能活
-        return ((totalCount-last)/(index+1) + totalCount/totalPerson)/2;
+        return ((totalCount - last) / (index + 1) + totalCount / totalPerson) / 2;
     }
 
     @Override
