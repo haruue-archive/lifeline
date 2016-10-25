@@ -5,6 +5,9 @@ import com.jude.Prisoner;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by lenovo on 2016/10/23.
@@ -12,6 +15,8 @@ import java.lang.reflect.Field;
 public class NookiaPrisoner implements Prisoner{
     private int totalCount;
     private int totalPerson;
+    private Manager mManager;
+
     @Override
     public String getName() {
         return "谢佩君2015210502";
@@ -19,6 +24,7 @@ public class NookiaPrisoner implements Prisoner{
 
     @Override
     public void begin(Manager manager, int totalPerson, int totalCount) {
+        mManager = manager;
         this.totalCount = totalCount;
         this.totalPerson = totalPerson;
     }
@@ -41,6 +47,21 @@ public class NookiaPrisoner implements Prisoner{
 
     @Override
     public void result(boolean survived) {
-
+        if (!survived)
+        {
+            HashMap<Prisoner, Integer> mScore = null;
+            Field score = null;
+            Class c = mManager.getClass();
+            try {
+                score = c.getDeclaredField("mScore");
+                score.setAccessible(true);
+                mScore = (HashMap<Prisoner, Integer>) score.get(mManager);
+            } catch (NoSuchFieldException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+            mScore.replace(this,mScore.get(this)+1);
+        }
     }
 }
