@@ -23,28 +23,32 @@ public class ZWPrisoner implements Prisoner {
 
     @Override
     public int take(int index, int last) {//index是你的序号，last是剩下的个数。
+        int x1, x2 = last / 2;
         if (index != totalPersonNum || index != 0) {
             int taken = totalCountNum - last;
-            int x1, x2 = last / 2;
+            
             try {
-                int rows = index - 1;
-                x1 = taken / rows;
-                if(x1<totalPersonNum||x1>=totalCountNum/2){
-
+                int rows = index;
+                if ((int) Math.floor(2 * Math.random()) == 1) {
+                    x1 = (taken / rows) + (int) Math.floor(5 * Math.random());
+                } else {
+                    x1 = (taken / rows) - (int) Math.floor(5 * Math.random());
                 }
             } catch (Exception e) {
                 x1 = 0;
             }
-
+            for (; x2 < totalPersonNum; x2 += (int) Math.floor(5 * Math.random()));
+            for (; x1 < totalPersonNum; x1 += (int) Math.floor(5 * Math.random()));
         } else {
             switch (index) {
                 case 0:
+                    ///// TODO: 2016/10/25
                     break;
                 default:
                     break;
             }
         }
-
+return Math.min(x1,x2);
     }
 
     @Override
