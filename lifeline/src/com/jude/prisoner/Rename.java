@@ -12,7 +12,7 @@ import java.util.*;
 /**
  * Created by lenovo on 2016/10/23.
  */
-public class MotherFuckerPrisoner implements Prisoner {
+public class Rename implements Prisoner {
     int totalCount;
     int totalPerson;
     Manager mymanager;
@@ -24,7 +24,7 @@ public class MotherFuckerPrisoner implements Prisoner {
     }
 
     @Override
-    public void begin(Manager manager, int totalPerson, int totalCount) throws IllegalAccessException {
+    public void begin(Manager manager, int totalPerson, int totalCount) {
         this.totalCount = totalCount;
         this.totalPerson = totalPerson;
          mymanager=manager;
