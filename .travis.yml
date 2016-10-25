@@ -11,5 +11,5 @@ jdk:
 script:
   - jdk_switcher use oraclejdk8
   - cd lifeline/src/
-  - javac -Dfile.encoding=UTF-8 com/jude/prisoner/*
+  - javac com/jude/prisoner/*
 
