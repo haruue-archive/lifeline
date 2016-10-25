@@ -1,6 +1,7 @@
 package com.jude;
 
 import com.jude.prisoner.NimaPrisoner;
+import com.jude.prisoner.ZhangPrisoner;
 
 import java.util.Map;
 
@@ -12,6 +13,7 @@ public class Main {
             new NimaPrisoner(),
             new NimaPrisoner(),
             new NimaPrisoner(),
+            new ZhangPrisoner()
     };
 
 
