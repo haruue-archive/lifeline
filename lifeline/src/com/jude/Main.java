@@ -1,10 +1,6 @@
 package com.jude;
 
-import com.jude.prisoner.JayPrisoner;
-import com.jude.prisoner.NimaPrisoner;
-import com.jude.prisoner.NookiaPrisoner;
-import com.jude.prisoner.Rename;
-import com.jude.prisoner.ZhangPrisoner;
+import com.jude.prisoner.*;
 
 import java.util.Map;
 
@@ -15,6 +11,7 @@ public class Main {
             new NookiaPrisoner(),   // Reflect
             new Rename(),           // Reflect
             new ZhangPrisoner(),
+            new BlakePrisonerM(),
     };
 
 
