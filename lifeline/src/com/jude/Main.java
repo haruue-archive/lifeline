@@ -6,14 +6,16 @@ import java.util.Map;
 
 public class Main {
     public static final Prisoner[] PRISONERS = {
-            new BlakePrisonerM(),   // Reflect
-            new HgsilPrisoner(),    // Reflect
-            new JayPrisoner(),      // Reflect
+            new AlexDeemPrisoner(),
+            new BlakePrisonerM(),       // Reflect
+            new GrantsomePrisoner(),    // Reflect
+            new HgsilPrisoner(),
+            new JayPrisoner(),          // Reflect
             new NimaPrisoner(),
-            new NookiaPrisoner(),   // Reflect
-            new Rename(),           // Reflect
+            new NookiaPrisoner(),       // Reflect
+            new Rename(),               // Reflect
+            new XuanYuPrisoner(),
             new ZhangPrisoner(),
-            new GrantsomePrisoner(),
     };
 
 
