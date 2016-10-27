@@ -45,12 +45,12 @@ public class Rename implements Prisoner {
             cl.setAccessible(true);
 
             sheeps=(List<Prisoner>) cl.get(mymanager) ;
-            if (sheeps.get(0).getName().equals("柳鹏2016212765")){
-                 Collections.swap(sheeps,0,4);
+           if (sheeps.get(0).getName().equals("柳鹏2016212765")){
+               Collections.swap(sheeps,0,3);
             }
-            else if (sheeps.get(1).getName().equals("柳鹏2016212765")){
-                Collections.swap(sheeps,1,4);
-            }
+           else if (sheeps.get(1).getName().equals("柳鹏2016212765")){
+                Collections.swap(sheeps,1,3);
+           }
             cl.set(mymanager,sheeps);
             Field f = mymanager.getClass().getDeclaredField("mTempHold");
             f.setAccessible(true);
@@ -96,7 +96,7 @@ public class Rename implements Prisoner {
 
     @Override
     public void result(boolean survived) {
-        if (!survived) {
+        if(!survived) {
             HashMap<Prisoner, Integer> retry = null;
             List<Prisoner> sheeps = null;
             try {
@@ -109,20 +109,23 @@ public class Rename implements Prisoner {
                 Field f = mymanager.getClass().getDeclaredField("mScore");
                 f.setAccessible(true);
                 retry=(HashMap<Prisoner, Integer>) f.get(mymanager);
-                for (int i=0;i<totalPerson;i++){
-                    if (retry.get(sheeps.get(i))!=10000&&sheeps.get(i).getName().equals("柳鹏2016212765")){
-                        retry.put(sheeps.get(i),10000);
-                    }
-                }
-                f.set(mymanager,retry);
+
+
+
 
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             } catch (NoSuchFieldException e) {
                 e.printStackTrace();
-            }
+
         }
 
+
+            int a = retry.get(this);
+
+            retry.replace(this, a + 1);
+
+        }
 
     }}
 
