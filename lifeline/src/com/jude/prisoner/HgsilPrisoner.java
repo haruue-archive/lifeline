@@ -27,30 +27,13 @@ public class HgsilPrisoner implements Prisoner{
 
     @Override
     public int take(int index, int last) {
-        /*Class c1 = manager.getClass();
-        List<Prisoner> prisoners = null;        //保存拿出来的所有人
-        HashMap<Prisoner,Integer> personHold = null ;      //保存每个人拿出来的豆子数
-        try {
-            Field persons = c1.getDeclaredField("mPrisoners");
-            persons.setAccessible(true);                    //提高效率
-            prisoners = (List<Prisoner>) persons.get(manager);
-            Field mHold = c1.getDeclaredField("mTempHold");
-            mHold.setAccessible(true);
-            personHold =  (HashMap<Prisoner, Integer>) mHold.get(manager);
-
-        }catch (NoSuchFieldException e){
-            e.printStackTrace();
-        }catch (IllegalAccessException i){
-            i.printStackTrace();
-        }*/
-
-
-        return 0;
+       
+        return mBeanCount/(totalPerson+4);
     }
 
     @Override
     public void result(boolean survived) {
-
+        /*
         if (!survived) {
             Class c1 = manager.getClass();
             HashMap<Prisoner,Integer> mScore = null;
@@ -64,8 +47,10 @@ public class HgsilPrisoner implements Prisoner{
             }catch (IllegalAccessException i){
                 i.printStackTrace();
             }
-            int n = mScore.get(this);
-            mScore.replace(this,n+1);
-        }
+            mScore.replace(this,mScore.get(this)+1);
+            if (mScore.get(this)>1000){                 //判断存活次数是否大于1000
+                mScore.replace(this,1000);
+            }
+        }*/
     }
 }
