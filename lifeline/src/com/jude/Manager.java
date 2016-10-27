@@ -1,12 +1,12 @@
 package com.jude;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+        import java.util.ArrayList;
+        import java.util.Arrays;
+        import java.util.Collections;
+        import java.util.Comparator;
+        import java.util.HashMap;
+        import java.util.List;
+        import java.util.Map;
 
 /**
  * Created by Mr.Jude on 2015/10/28.
@@ -71,8 +71,13 @@ public class Manager {
         //如果返回无效个数，和上面的神经病一样死
         if (count > last || count < 0) count = -1;
 
-        System.out.println(mPrisoners.get(index).getName() + "取了" + count + "个");
-        //保存每个人取的豆子数
+        if(count!=-1) {
+            System.out.println(mPrisoners.get(index).getName() + "取了" + count + "个");
+            //保存每个人取的豆子数
+        }else
+        {
+            System.out.println(mPrisoners.get(index).getName()+"宛如一个智障");
+        }
         mTempHold.replace(mPrisoners.get(index), count);
         return count;
     }

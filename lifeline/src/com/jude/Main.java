@@ -9,6 +9,17 @@ import java.util.Map;
 public class Main {
     public static final Prisoner[] PRISONERS = {
             new NimaPrisoner(),
+            new NimaPrisoner(),
+            new NimaPrisoner(),
+            new NimaPrisoner(),
+            new NimaPrisoner(),
+            new NimaPrisoner(),
+            new NimaPrisoner(),
+            new NimaPrisoner(),
+            new NimaPrisoner(),
+            new NimaPrisoner(),
+            new NimaPrisoner(),
+            new NimaPrisoner(),
             new ZWPrisoner(),
             new JayPrisoner(),
     };
