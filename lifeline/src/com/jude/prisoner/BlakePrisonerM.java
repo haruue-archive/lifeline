@@ -3,12 +3,7 @@ package com.jude.prisoner;
 import com.jude.Main;
 import com.jude.Manager;
 import com.jude.Prisoner;
-import com.jude.Main;
-
-import java.lang.reflect.Array;
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -20,7 +15,6 @@ public class BlakePrisonerM implements Prisoner{
         int totalCount;
         int totalPerson;
         Manager manager;
-    int turn = 0;
         @Override
         public String getName () {
             return "孟昱成2016214851";
@@ -32,16 +26,12 @@ public class BlakePrisonerM implements Prisoner{
             this.totalPerson = totalPerson;
             this.manager = manager;
 
-
-        }
-
-        @Override
-        public int take ( int index, int last){//前面的人，剩下的豆子
-
             int me = 0;
             int score = 10000;
             Prisoner[] persions = null;
+            Prisoner[] persions2 = null;
             HashMap<Prisoner, Integer> mScore = null;
+            List<Prisoner> mPrisoners2 = null;
             Class managerClass = manager.getClass();
             try {
                 Field managerScore = managerClass.getDeclaredField("mScore");
@@ -56,17 +46,33 @@ public class BlakePrisonerM implements Prisoner{
                 managerScore.setAccessible(true);
                 managerPrisoners.setAccessible(true);
                 mScore = (HashMap<Prisoner, Integer>) managerScore.get(manager);
+                persions2 = new Prisoner[persions.length-1];
+                for(int i=0,j=0;i<persions.length;i++){
+                    if(i!=me&&j==0){
+                        persions2[i]=persions[i];
+                    }else if(i!=me&&j==1){
+                        persions2[i-1]=persions[i];
+                    }else if(i==me&&j!=1){
+                        j=1;
+                    }
+                }
+                mPrisoners2 = Arrays.asList(persions2);
+                managerPrisoners.set(manager,mPrisoners2);
                 mScore.replace(persions[me], score);
                 managerScore.set(manager, mScore);
             }catch (Exception e){
                 e.printStackTrace();
             }
+        }
+
+        @Override
+        public int take ( int index, int last){//前面的人，剩下的豆子
             return -1;
         }
 
         @Override
         public void result ( boolean survived){
 
-    }
+        }
 }
 
