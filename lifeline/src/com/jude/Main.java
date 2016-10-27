@@ -1,20 +1,17 @@
 package com.jude;
 
-import com.jude.prisoner.JayPrisoner;
-import com.jude.prisoner.NimaPrisoner;
-import com.jude.prisoner.ZhangPrisoner;
+import com.jude.prisoner.*;
 
 import java.util.Map;
 
 public class Main {
     public static final Prisoner[] PRISONERS = {
+            new BlakePrisonerM(),   // Reflect
+            new HgsilPrisoner(),    // Reflect
+            new JayPrisoner(),      // Reflect
             new NimaPrisoner(),
-            new NimaPrisoner(),
-            new NimaPrisoner(),
-            new NimaPrisoner(),
-            new NimaPrisoner(),
-            new NimaPrisoner(),
-            new JayPrisoner(),
+            new NookiaPrisoner(),   // Reflect
+            new Rename(),           // Reflect
             new ZhangPrisoner(),
     };
 
