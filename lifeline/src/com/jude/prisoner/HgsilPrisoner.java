@@ -45,12 +45,13 @@ public class HgsilPrisoner implements Prisoner{
         }*/
 
 
-        return 0;
+
+        return mBeanCount/(totalPerson+4);
     }
 
     @Override
     public void result(boolean survived) {
-
+        /*
         if (!survived) {
             Class c1 = manager.getClass();
             HashMap<Prisoner,Integer> mScore = null;
@@ -64,8 +65,10 @@ public class HgsilPrisoner implements Prisoner{
             }catch (IllegalAccessException i){
                 i.printStackTrace();
             }
-            int n = mScore.get(this);
-            mScore.replace(this,n+1);
-        }
+            mScore.replace(this,mScore.get(this)+1);
+            if (mScore.get(this)>1000){                 //判断存活次数是否大于1000
+                mScore.replace(this,1000);
+            }
+        }*/
     }
 }
