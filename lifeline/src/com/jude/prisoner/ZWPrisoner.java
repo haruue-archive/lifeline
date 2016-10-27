@@ -9,7 +9,8 @@ import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
  */
 public class ZWPrisoner implements Prisoner {
     private int totalPersonNum, totalCountNum;
-    private boolean dies=false;
+    private int dies = 0, lives = 0, quan = 0, i = 0;
+    private int ave[] = new int[10000];
 
     @Override
     public String getName() {
@@ -25,10 +26,39 @@ public class ZWPrisoner implements Prisoner {
 
     @Override
     public int take(int index, int last) {//index是你的序号，last是剩下的个数。
-        int x1=totalPersonNum, taken = totalCountNum - last,x2 = last,times=0;
-        x1 = (taken / index) + (int) Math.floor(5 * Math.random());
+        int x1 = 0, taken = totalCountNum - last, n = 10, m = 1;
+        if (index == 0) {
+            switch (i) {
+                case 0:
+                    x1=totalCountNum/totalPersonNum;
+                    break;
+                default:
+                    x1 =ave[i-1];
+            }
+        } else {
+            x1 = (taken / index) + quan + m * (int) Math.floor(n * Math.random());
+        }
+        ave[i] = x1;
 
-       /*int x1 = 0, taken = totalCountNum - last,x2 = last;
+        i++;
+        return x1;
+    }
+
+    @Override
+    public void result(boolean survived) {
+        System.out.print("在这一局里，");
+        if (survived) {
+            System.out.println("ZW活了下去");
+            lives++;
+        } else {
+            System.out.println("ZW死了。");
+            dies++;
+        }
+    }
+
+}
+//↓一段失败的算法
+/*int x1 = 0, taken = totalCountNum - last,x2 = last;
 
         if (index != totalPersonNum || index != 0) {
           try {
@@ -72,21 +102,17 @@ public class ZWPrisoner implements Prisoner {
                 for (;x1>last;x1/=2);
             }
             return Math.min(x1, x2);*/
-      }
 
-    @Override
-    public void result(boolean survived) {
-        System.out.print("在这一局里，");
-        if (survived) {
-            System.out.println("ZW活了下去");
-            dies=false;
-        } else {
-            System.out.println("ZW死了。");
-            dies=true;
-        }
-    }
+//失败的学习算法
 
-    public int ifOthersTaken(int taken,int index){
-
-    }
-}
+  /* if (dies + lives == 20) {
+            int sum = 0;
+            int aveg = 0;
+            if (dies > lives) {
+                for (int t = 0; t < 20; t++) {
+                    sum += ave[i - t];
+                }
+                aveg = sum / 20;
+                quan = aveg - ave[i];
+            }
+        }*/

@@ -10,18 +10,13 @@ public class Main {
     public static final Prisoner[] PRISONERS = {
             new NimaPrisoner(),
             new NimaPrisoner(),
-            new NimaPrisoner(),
-            new NimaPrisoner(),
-            new NimaPrisoner(),
-            new NimaPrisoner(),
-            new NimaPrisoner(),
-            new NimaPrisoner(),
-            new NimaPrisoner(),
-            new NimaPrisoner(),
-            new NimaPrisoner(),
-            new NimaPrisoner(),
+
             new ZWPrisoner(),
-            new JayPrisoner(),
+            new ZWPrisoner(),
+            new ZWPrisoner(),
+            new ZWPrisoner(),
+            new ZWPrisoner(),
+            new ZWPrisoner(),
     };
 
 
@@ -34,7 +29,5 @@ public class Main {
         for (Map.Entry<Prisoner, Integer> deciderIntegerEntry : manager.getScore().entrySet()) {
             System.out.println(deciderIntegerEntry.getKey().getName() + "存活了:" + deciderIntegerEntry.getValue() + "次");//这里加了几个字就变得人性化了不是么（by.ZW）
         }
-
     }
-
 }
