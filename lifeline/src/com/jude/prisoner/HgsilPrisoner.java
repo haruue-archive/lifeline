@@ -27,25 +27,7 @@ public class HgsilPrisoner implements Prisoner{
 
     @Override
     public int take(int index, int last) {
-        /*Class c1 = manager.getClass();
-        List<Prisoner> prisoners = null;        //保存拿出来的所有人
-        HashMap<Prisoner,Integer> personHold = null ;      //保存每个人拿出来的豆子数
-        try {
-            Field persons = c1.getDeclaredField("mPrisoners");
-            persons.setAccessible(true);                    //提高效率
-            prisoners = (List<Prisoner>) persons.get(manager);
-            Field mHold = c1.getDeclaredField("mTempHold");
-            mHold.setAccessible(true);
-            personHold =  (HashMap<Prisoner, Integer>) mHold.get(manager);
-
-        }catch (NoSuchFieldException e){
-            e.printStackTrace();
-        }catch (IllegalAccessException i){
-            i.printStackTrace();
-        }*/
-
-
-
+       
         return mBeanCount/(totalPerson+4);
     }
 
