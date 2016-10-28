@@ -21,6 +21,7 @@ public class Main {
             new XiaossicaPrisoner(),
             new XuanYuPrisoner(),
             new ZhangPrisoner(),
+            new ZouPrisoner(),
     };
 
 
