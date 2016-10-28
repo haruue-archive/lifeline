@@ -1,5 +1,6 @@
 package com.jude;
 
+import com.jude.prisoner.HxPrisoner;
 import com.jude.prisoner.JayPrisoner;
 import com.jude.prisoner.NimaPrisoner;
 import com.jude.prisoner.ZhangPrisoner;
@@ -16,6 +17,7 @@ public class Main {
             new NimaPrisoner(),
             new JayPrisoner(),
             new ZhangPrisoner(),
+            new HxPrisoner(),
     };
 
 
