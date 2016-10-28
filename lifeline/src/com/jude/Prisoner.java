@@ -11,7 +11,7 @@ package com.jude;
 
 
 public interface Prisoner {
-    //返回你的名字＋学号
+    //返回你的姓名加学号
     String getName();
     //当游戏开始，告诉你囚犯总人数，与豆子总数
     void begin(Manager manager,int totalPerson,int totalCount);
