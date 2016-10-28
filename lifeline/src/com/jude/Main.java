@@ -8,11 +8,13 @@ public class Main {
     public static final Prisoner[] PRISONERS = {
             new AlexDeemPrisoner(),
             new BlakePrisonerM(),       // Reflect
+            new GodxuPrisoner(),
             new GrantsomePrisoner(),    // Reflect
             new HgsilPrisoner(),        // Reflect
             new HxPrisoner(),
             new JayPrisoner(),          // Reflect
             new JerryPrisoner(),
+            new MaoPrisoner(),
             new NimaPrisoner(),
             new NirioPrisoner(),
             new NookiaPrisoner(),       // Reflect
