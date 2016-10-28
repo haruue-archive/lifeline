@@ -5,11 +5,12 @@ import com.jude.Prisoner;
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 /**
+ * wow
  * Created by 张巍 on 2016/10/25.
  */
 public class ZWPrisoner implements Prisoner {
     private int totalPersonNum, totalCountNum;
-    private int dies = 0, lives = 0, quan = 0, i = 0;
+    private int dies = 0, lives = 0, i = 0;
     private int ave[] = new int[10000];
 
     @Override
@@ -26,7 +27,7 @@ public class ZWPrisoner implements Prisoner {
 
     @Override
     public int take(int index, int last) {//index是你的序号，last是剩下的个数。
-        int x1 = 0, taken = totalCountNum - last, n = 10, m = 1;
+        int x1 , taken = totalCountNum - last, n = 10, m = 1;
         if (index == 0) {
             switch (i) {
                 case 0:
@@ -36,7 +37,7 @@ public class ZWPrisoner implements Prisoner {
                     x1 =ave[i-1];
             }
         } else {
-            x1 = (taken / index) + quan + m * (int) Math.floor(n * Math.random());
+            x1 = (taken / index) + m * (int) Math.floor(n * Math.random());
         }
         ave[i] = x1;
 
