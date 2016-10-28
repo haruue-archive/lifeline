@@ -16,6 +16,7 @@ public class Main {
             new JayPrisoner(),          // Reflect
             new JerryPrisoner(),
             new KiraPrisoner(),
+            new LukePrisoner(),         // Reflect
             new MaoPrisoner(),
             new NimaPrisoner(),
             new NirioPrisoner(),
