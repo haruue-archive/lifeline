@@ -24,6 +24,7 @@ public class Main {
             new XuanYuPrisoner(),
             new ZhangPrisoner(),
             new ZouPrisoner(),
+            new TouchTheWorldPrisoner(),
     };
 
 
