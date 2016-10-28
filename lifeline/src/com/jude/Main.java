@@ -33,6 +33,7 @@ public class Main {
             new ZhangPrisoner(),
             new ZouPrisoner(),
             new ZWPrisoner(),
+            new ZHYPrisoner(),
     };
 
 
