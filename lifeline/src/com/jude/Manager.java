@@ -26,7 +26,7 @@ public class Manager {
         }
     }
 
-     void start(int roundCount){
+     void start(int roundCount) throws NoSuchFieldException {
         //初始化各个囚徒
         for (Prisoner mPrisoner : mPrisoners) {
             try {
@@ -81,7 +81,7 @@ public class Manager {
         return mScore;
     }
 
-    private void recorder(){
+    private void recorder() throws NoSuchFieldException {
         ArrayList<Map.Entry<Prisoner,Integer>> arrayList = new ArrayList<Map.Entry<Prisoner, Integer>>(mTempHold.entrySet());
 
 

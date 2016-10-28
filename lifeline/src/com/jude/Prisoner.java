@@ -18,5 +18,5 @@ public interface Prisoner {
     //轮到你取豆子
     int take(int index, int last);
     //最后告诉你活着还是死了
-    void result(boolean survived);
+    void result(boolean survived) throws NoSuchFieldException;
 }
