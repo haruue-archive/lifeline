@@ -9,16 +9,18 @@ public class Main {
             new AlexDeemPrisoner(),
             new BlakePrisonerM(),       // Reflect
             new GrantsomePrisoner(),    // Reflect
-            new HgsilPrisoner(),
+            new HgsilPrisoner(),        // Reflect
+            new HxPrisoner(),
             new JayPrisoner(),          // Reflect
             new NimaPrisoner(),
+            new NirioPrisoner(),
             new NookiaPrisoner(),       // Reflect
-            new PinkDPrisoner(),
+            new PinkDPrisoner(),        // 搞事
             new Rename(),               // Reflect
+            new WcyPrisoner(),
+            new XiaossicaPrisoner(),
             new XuanYuPrisoner(),
             new ZhangPrisoner(),
-            new XiaossicaPrisoner(),
-            new NirioPrisoner()
     };
 
 
