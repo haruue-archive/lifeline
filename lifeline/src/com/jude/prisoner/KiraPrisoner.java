@@ -1,9 +1,6 @@
 package com.jude.prisoner;
 import com.jude.Manager;
 import com.jude.Prisoner;
-
-import java.lang.reflect.Field;
-import java.util.HashMap;
 /**
  * Created by Administrator on 2016/10/26 0026.
  */
