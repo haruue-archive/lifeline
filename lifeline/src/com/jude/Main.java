@@ -16,6 +16,7 @@ public class Main {
             new Rename(),               // Reflect
             new XuanYuPrisoner(),
             new ZhangPrisoner(),
+            new XiaossicaPrisoner(),
     };
 
 
