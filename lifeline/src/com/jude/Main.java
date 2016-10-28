@@ -17,7 +17,6 @@ public class Main {
             new NimaPrisoner(),
             new JayPrisoner(),
             new ZhangPrisoner(),
-            new HxPrisoner(),
     };
 
 
