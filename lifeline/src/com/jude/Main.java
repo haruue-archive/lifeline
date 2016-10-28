@@ -21,6 +21,7 @@ public class Main {
             new PinkDPrisoner(),        // 搞事
             new Rename(),               // Reflect
             new TentYinPrisoner(),
+            new TouchTheWorldPrisoner(),
             new WcyPrisoner(),
             new XiaossicaPrisoner(),
             new XuanYuPrisoner(),
