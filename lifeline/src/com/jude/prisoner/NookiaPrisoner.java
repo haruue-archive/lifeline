@@ -3,11 +3,8 @@ package com.jude.prisoner;
 import com.jude.Manager;
 import com.jude.Prisoner;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Created by lenovo on 2016/10/23.

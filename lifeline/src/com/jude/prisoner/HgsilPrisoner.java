@@ -3,10 +3,6 @@ package com.jude.prisoner;
 import com.jude.Manager;
 import com.jude.Prisoner;
 
-import java.lang.reflect.Field;
-import java.util.HashMap;
-import java.util.List;
-
 
 /**
  * Created by Administrator on 2016/10/24 0024.

@@ -3,7 +3,6 @@ package com.jude.prisoner;
 
 import com.jude.Manager;
 import com.jude.Prisoner;
-import com.sun.javafx.collections.MappingChange;
 
 import java.lang.reflect.Field;
 import java.util.*;

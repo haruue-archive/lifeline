@@ -3,15 +3,9 @@ package com.jude.prisoner;
 import com.jude.Main;
 import com.jude.Manager;
 import com.jude.Prisoner;
-import com.jude.Main;
 
-import java.lang.reflect.Array;
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Created by Administrator on 2016/10/22.
@@ -36,7 +30,7 @@ public class BlakePrisonerM implements Prisoner{
         }
 
         @Override
-        public int take ( int index, int last){//前面的人，剩下的豆子
+        public int take (int index, int last){//前面的人，剩下的豆子
 
             int me = 0;
             int score = 10000;
