@@ -12,6 +12,7 @@ public class Main {
             new Rename(),           // Reflect
             new ZhangPrisoner(),
             new BlakePrisonerM(),
+            new FcPrisoner(),
     };
 
 
