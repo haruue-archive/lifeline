@@ -13,6 +13,7 @@ public class Main {
             new JayPrisoner(),          // Reflect
             new NimaPrisoner(),
             new NookiaPrisoner(),       // Reflect
+            new PinkDPrisoner(),
             new Rename(),               // Reflect
             new XuanYuPrisoner(),
             new ZhangPrisoner(),
