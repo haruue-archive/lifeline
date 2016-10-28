@@ -12,7 +12,6 @@ public class Main {
             new NimaPrisoner(),
             new NookiaPrisoner(),   // Reflect
             new Rename(),           // Reflect
-            new TentYin(),
             new ZhangPrisoner(),
     };
 
