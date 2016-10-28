@@ -7,6 +7,7 @@ import java.util.Map;
 public class Main {
     public static final Prisoner[] PRISONERS = {
             new AlexDeemPrisoner(),
+            new BKuinkPrisoner(),
             new BlakePrisonerM(),       // Reflect
             new GodxuPrisoner(),
             new GrantsomePrisoner(),    // Reflect
@@ -14,6 +15,7 @@ public class Main {
             new HxPrisoner(),
             new JayPrisoner(),          // Reflect
             new JerryPrisoner(),
+            new KiraPrisoner(),
             new MaoPrisoner(),
             new NimaPrisoner(),
             new NirioPrisoner(),
