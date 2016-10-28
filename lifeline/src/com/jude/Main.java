@@ -18,7 +18,8 @@ public class Main {
             new XuanYuPrisoner(),
             new ZhangPrisoner(),
             new XiaossicaPrisoner(),
-            new NirioPrisoner()
+            new NirioPrisoner(),
+            new JerryPrisoner()
     };
 
 
