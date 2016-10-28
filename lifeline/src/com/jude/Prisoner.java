@@ -1,5 +1,7 @@
 package com.jude;
 
+        import com.jude.prisoner.AlexDeemPrisoner;
+
 /**
  * Created by Mr.Jude on 2015/10/28.
  * 这是个有趣的实验，你们都是囚犯，给你们N颗豆子，你们随便拿。
@@ -10,7 +12,7 @@ package com.jude;
  */
 
 
-public interface Prisoner {
+public   interface   Prisoner{
     //返回你的名字＋学号
     String getName();
     //当游戏开始，告诉你囚犯总人数，与豆子总数
@@ -19,4 +21,23 @@ public interface Prisoner {
     int take(int index, int last);
     //最后告诉你活着还是死了
     void result(boolean survived);
+
 }
+class GodxuPrisoner  implements   Prisoner{int totalCount;int totalPerson;
+    public String getName(){
+        return "许弟霜2016210244";
+    }
+    public void begin(Manager manager,int totalCount,int totalPerson){
+        this.totalCount=totalCount;
+        this.totalPerson=totalPerson;
+
+    }
+    public int take(int index,int last){
+        //经过先知Godxu指引，这个数有天命在身。
+        return (totalPerson/totalCount+totalCount/totalPerson-30);
+    }public void result(boolean survive){
+    }
+}
+
+
+

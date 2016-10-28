@@ -21,8 +21,10 @@ public class Main {
             new XiaossicaPrisoner(),
             new XuanYuPrisoner(),
             new ZhangPrisoner(),
-    };
 
+
+
+    };
 
     public static void main(String[] args) {
         //new 一个审判者，把囚徒们和1000颗豆子给他
