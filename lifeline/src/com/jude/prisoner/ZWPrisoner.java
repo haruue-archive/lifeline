@@ -2,7 +2,6 @@ package com.jude.prisoner;
 
 import com.jude.Manager;
 import com.jude.Prisoner;
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 /**
  * wow
