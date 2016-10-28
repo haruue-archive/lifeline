@@ -12,11 +12,13 @@ public class Main {
             new HgsilPrisoner(),        // Reflect
             new HxPrisoner(),
             new JayPrisoner(),          // Reflect
+            new JerryPrisoner(),
             new NimaPrisoner(),
             new NirioPrisoner(),
             new NookiaPrisoner(),       // Reflect
             new PinkDPrisoner(),        // 搞事
             new Rename(),               // Reflect
+            new TentYinPrisoner(),
             new WcyPrisoner(),
             new XiaossicaPrisoner(),
             new XuanYuPrisoner(),
