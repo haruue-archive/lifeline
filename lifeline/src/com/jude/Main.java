@@ -21,7 +21,7 @@ public class Main {
             new ZhangPrisoner(),
             new XiaossicaPrisoner(),
             new NirioPrisoner(),
-            new ZWPrisoner(),
+            new ZWPrisoner() ,
     };
 
 
