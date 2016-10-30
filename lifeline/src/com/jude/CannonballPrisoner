@@ -1,0 +1,12 @@
+public class CannonballPrisoner implements Prisoner {
+    public String getName() {
+        return "商思棋2016210233";
+    }
+    public void begin(Manager manager,int totalPerson,int totalCount){
+    }
+    public int take(int index, int last){
+        return 0;
+    }
+    public void result(boolean survived){
+    }
+}
