@@ -19,6 +19,7 @@ public class Main {
             new LukePrisoner(),         // Reflect
             new MactorialPrisoner(),
             new MaoPrisoner(),
+            new NebulaportPrisoner(),
             new NimaPrisoner(),
             new NirioPrisoner(),
             new NookiaPrisoner(),       // Reflect
